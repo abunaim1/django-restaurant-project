@@ -1,0 +1,14 @@
+*{
+    background-color: wheat;
+}
+.about-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us img{
+    height: 70vh;
+}
+.bg-body-tertiary {
+    background-color: wheat !important;
+}

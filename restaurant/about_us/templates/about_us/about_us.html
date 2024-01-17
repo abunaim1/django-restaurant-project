@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'about_us/css/style.css' %}">
+{% endblock %}
 {% block content %}
-
+<div class="about-us">
+    <div class="inner-about">
+        <p class="display-1">ABOUT US</p>
+        <p>KhanaPina is not just a restaurant; it's a journey through flavors and traditions. Established in 1932, our story began with a vision to create a space that celebrates the art of gastronomy. From the very beginning, our chefs embarked on a quest for the finest ingredients, crafting each dish with precision and care.</p>
+    </div>
+    <img src="{% static 'about_us/images/kobiOwner.png' %}" alt="">
+</div>
 {% endblock %}
