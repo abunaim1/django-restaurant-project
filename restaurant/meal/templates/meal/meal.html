@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% block link %}
+    <link rel="stylesheet" href="{% static 'meal/css/style.css' %}">
+{% endblock %}
 {% block content %}
-<div>
-    {% for meal in meals %}
-        <div class="card" style="width: 18rem;">
-            <img src="{{meal.strCategoryThumb}}" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h2 class="card-title">{{meal.idCategory}}</h2>
-            <h5 class="card-title">{{meal.strCategory }}</h5>
-            <p class="card-text">{{ meal.strCategoryDescription | truncatewords:10 }}</p>
+
+<div class="container">
+    <div class="row cards">
+        {% for meal in meals %}
+            <div class="card col-4 mb-3" style="width: 18rem;">
+                <img src="{{meal.strCategoryThumb}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h2 class="card-title">{{meal.idCategory}}</h2>
+                <h5 class="card-title">{{meal.strCategory }}</h5>
+                <p class="card-text">{{ meal.strCategoryDescription | truncatewords:10 }}</p>
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
